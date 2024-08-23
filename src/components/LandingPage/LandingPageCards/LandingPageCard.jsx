@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import ProductDetails from "../../ProductDetails/ProductDetails";
 import { useNavigate } from "react-router-dom";
 
 function LandingPageCard({
@@ -25,6 +23,7 @@ function LandingPageCard({
         <img
           src={images}
           className="object-contain w-64 h-40 flex-grow-3 flex-shrink-1 mb-4 "
+          alt={title}
         />
         <h1 className="font-bold">{title}</h1>
         <h1 className="whitespace-nowrap overflow-hidden overflow-ellipsis w-full">

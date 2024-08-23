@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import useFetchData from "../../hooks/useFetchData";
 import { GET_N_NUMBER_OF_PRODUCTS } from "../../utils/URLconstants";
 import ShimmerUI from "../shimmerUI/ShimmerUI";
 
@@ -49,6 +48,7 @@ function ImageSlider() {
       </button>
       <img
         src={imageData[active]?.images[0]}
+        alt={imageData[active]?.title}
         className="object-contain h-full w-auto"
       />
       <button

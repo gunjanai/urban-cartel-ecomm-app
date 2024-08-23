@@ -6,8 +6,6 @@ function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
 
-  console.log(cartItems);
-
   let subtotal = 0;
   for (let i = 0; i < cartItems.length; i++) {
     subtotal += cartItems[i].price;

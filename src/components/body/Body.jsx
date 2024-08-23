@@ -1,7 +1,6 @@
-import React, { useRef, useState } from "react";
-import LandingPageContainer from '../LandingPage/LandingPageContainer'
+import React from "react";
+import LandingPageContainer from "../LandingPage/LandingPageContainer";
 function Body() {
-
   return (
     <div>
       <LandingPageContainer />
