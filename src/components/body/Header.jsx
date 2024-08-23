@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function Header() {
   const cartItems = useSelector((state) => state.cart.items);
 
-  console.log("header log", cartItems);
   return (
     <div className="p-4 h-[4rem] w-[100vw] shadow-lg bg-black text-black flex items-center justify-between">
       <div className="flex justify-center items-center">
