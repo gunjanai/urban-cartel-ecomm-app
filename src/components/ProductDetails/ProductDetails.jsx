@@ -10,6 +10,7 @@ function ProductDetails() {
   const { id } = useParams();
   const [productData, setProductData] = useState({});
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     fetchProductDetails();
   }, [id]);

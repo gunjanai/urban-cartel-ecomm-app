@@ -8,6 +8,7 @@ function LandingPageCardContainer() {
   const [nextPage, setNextPage] = useState(0);
   const [showShimmer, setShowShimmer] = useState(false);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     fetchProductData(nextPage);
     setNextPage((prev) => prev + 10);
