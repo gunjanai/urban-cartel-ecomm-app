@@ -5,8 +5,10 @@ import ShimmerUI from "../shimmerUI/ShimmerUI";
 import RatingStars from "./RatingStars";
 import AddToCart from "./AddToCart";
 import CustomerReviews from "./CustomerReviews";
+import Loader from "../loading/Loader";
 
 function ProductDetails() {
+  const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams();
   const [productData, setProductData] = useState({});
 
@@ -38,9 +40,14 @@ function ProductDetails() {
             alt={productData?.title}
             className="w-[80%] md:w-[50%] lg:w-[40%]"
             loading="lazy"
+            onLoad={() => setIsLoading(false)}
+            onError={() => setIsLoading(false)}
+            style={{ display: isLoading ? "none" : "block" }}
           />
         ) : (
-          <div className="w-[50%] bg-gray-200">Image not available</div>
+          <div className="w-[50%] bg-gray-200">
+            <Loader />
+          </div>
         )}
 
         <div className="flex flex-col mt-2 lg:mt-12">
